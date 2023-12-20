@@ -1,0 +1,16 @@
+// how to do parameters:
+// a parameter is something that takes a number the user input and does something to it
+// basically it's an input to the function
+var first;
+
+onEvent("numInput", "change", function( ) {
+  first = getNumber("numInput");
+  updateNumbers(first);
+});
+function updateNumbers(val) {
+  var output = "The number you gave is: " +val;
+  val = val + randomNumber(1, 10);
+  val = val * 2;
+  output = output+ "\nThe new number is: " + val;
+  setText("outputArea", output);
+}
